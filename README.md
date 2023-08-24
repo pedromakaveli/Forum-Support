@@ -41,6 +41,10 @@ This is a simple ticket dashboard in Laravel
     ```bash
     php artisan migrate:fresh
     ```
+    ```
+    php artisan migrate
+    ```
+    
 7. Start the server using `Artisan`:
     ```bash
     php artisan serve
