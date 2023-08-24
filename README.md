@@ -3,7 +3,7 @@
 ## About the project
 
 This is a simple ticket dashboard in Laravel.
-The purpose of this project was to practice using Laravel and make it workable. The purpose of this project was to practice using Laravel and make it workable. The design part was left aside and the focus was given to the back-end of the project, in a new commit I may be able to make the screen more pleasant.
+The purpose of this project was to practice using Laravel and make it workable. The design part was left aside and the focus was given to the back-end of the project, in a new commit I may be able to make the screen more pleasant.
 
 
 ## How to run the project
