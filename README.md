@@ -14,7 +14,7 @@ The purpose of this project was to practice using Laravel and make it workable. 
 - `composer`
 - [compatible database](https://laravel.com/docs/10.x/database#introduction)
 
-### 📝 Passo-a-passo:
+### 📝 Steps:
 
 1. Clone the repository:
     ```bash
