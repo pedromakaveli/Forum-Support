@@ -2,8 +2,11 @@
 @section('title') Todos os tickets @endsection
 @section('content')
     <h2>Tickets abertos</h2>
-    <a href="{{route('support.open')}}">Abrir novo ticket</a>
-    <br><br>
+    
+    <div class="support-index-btn-open">
+        <a class="btn btn-open" href="{{route('support.open')}}">Abrir novo ticket</a>
+    </div>
+
 
     <table>
         <tr>
@@ -12,7 +15,6 @@
             <th>Status</th>
             <th>Criado em</th>
             <th>Atualizado em</th>
-            <th>Link</th>
         </tr>
 
         @foreach($tickets as $ticket)
@@ -22,7 +24,8 @@
                 <td>{{$ticket->status}}</td>
                 <td>{{$ticket->created_at}}</td>
                 <td>{{$ticket->updated_at}}</td>
-                <td><a target="_blank" href="{{route('support.show', $ticket->id)}}">Visualizar</a></td>
+                <td><a class="btn btn-view" target="_blank" href="{{route('support.show', $ticket->id)}}">Visualizar</a></td>
+                <td><a class="btn btn-delete" href="{{route('support.delete', $ticket->id)}}">Deletar</a></td>
             </tr>
         @endforeach
 

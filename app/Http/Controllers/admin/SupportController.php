@@ -37,4 +37,14 @@ class SupportController extends Controller
 
         return view('/admin/support/show', compact('ticket'));
     }
+
+    public function delete (Request $request) {
+        $ticket = Support::where('id', $request->id)->delete();
+
+        if ($ticket == 1) {
+            return view ('/admin/support/index');
+        }
+
+        return view('/admin/support/error', ['error' => 'Ocorreu um erro ao tentar excluir']);
+    }
 }

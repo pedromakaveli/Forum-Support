@@ -10,9 +10,12 @@
         <br><br>
         <textarea name="body" id="" cols="30" rows="5" placeholder="Digite sua mensagem"></textarea>
         <br><br>
-        <input type="submit" value="Enviar">
+        <input class="btn btn-view" type="submit" value="Enviar">
     </form>
-    <br>
-    <a href="{{route('support.index')}}">Voltar</a>
+
+    <div class="return-content">
+        <a class="btn btn-view" href="{{route('support.index')}}"> << Voltar</a>
+    </div>
+    
     
 @endsection

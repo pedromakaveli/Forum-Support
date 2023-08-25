@@ -23,8 +23,10 @@
 
     <br>
 
-    <a href="{{route('support.index')}}">Ver todos tickets</a>
-    <span> | </span>
-    <a href="{{route('support.open')}}">Abrir novo ticket</a>
+    <div class="return-content">
+        <a class="btn btn-view" href="{{route('support.index')}}">Ver todos tickets</a>
+        <a class="btn btn-view" href="{{route('support.open')}}">Abrir novo ticket</a>
+    </div>
+
 
 @endsection
