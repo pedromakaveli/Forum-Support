@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class SupportController extends Controller
 {
-    public function index () {
+    public function index (Request $request) {
         $tickets = Support::all();
         return view('admin/support/index', compact('tickets'));
     }
@@ -32,19 +32,19 @@ class SupportController extends Controller
         $ticket = Support::find($request->id);
 
         if (!$ticket) {
-            return view('/admin/support/error', ['error' => 'Ticket inexistente']);
+            return view('admin/support/error', ['error' => 'Ticket inexistente']);
         }
 
-        return view('/admin/support/show', compact('ticket'));
+        return view('admin/support/show', compact('ticket'));
     }
 
     public function delete (Request $request) {
         $ticket = Support::where('id', $request->id)->delete();
 
         if ($ticket == 1) {
-            return view ('/admin/support/index');
+            return redirect ('/support');
         }
 
-        return view('/admin/support/error', ['error' => 'Ocorreu um erro ao tentar excluir']);
+        return view('admin/support/error', ['error' => 'Ocorreu um erro ao tentar excluir']);
     }
 }
